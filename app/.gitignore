@@ -1,0 +1,15 @@
+# System files to ignore
+.cache/
+.mozilla/
+.ssh/
+.config/
+.local/
+.dbus/
+.Xauthority
+.ICEauthority
+.theia/
+*.json
+# Python files to ignore
+__pycache__/
+*.pyc
+.env
