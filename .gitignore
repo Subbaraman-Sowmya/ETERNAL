@@ -1,14 +1,19 @@
-# Ignore everything by default
-*
+# Ignore all hidden system files and directories
 .*
+# Ignore the specific system 'filesystem' file
+filesystem
+# Ignore all standard system folders
+.cache/
+.config/
+.dbus/
+.kube/
+.local/
+.mozilla/
+.ssh/
+.theia/
+.vnc/
 
-# But DO NOT ignore the app folder and its contents
+# But ALLOW the 'app' directory and the Rigveda work
 !app/
 !app/**
 !.gitignore
-
-# Ignore local system files specifically
-.ssh/
-.mozilla/
-.cache/
-filesystem
