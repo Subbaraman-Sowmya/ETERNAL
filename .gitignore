@@ -1,0 +1,14 @@
+# Ignore everything by default
+*
+.*
+
+# But DO NOT ignore the app folder and its contents
+!app/
+!app/**
+!.gitignore
+
+# Ignore local system files specifically
+.ssh/
+.mozilla/
+.cache/
+filesystem
