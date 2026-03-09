@@ -1,0 +1,18 @@
+# Writing the first official Mandala file
+cat <<EOF > app/Mandala_1.json
+{
+  "project": "ETERNAL",
+  "assigned_by": "Kanchi Mutt",
+  "mandala": 1,
+  "sukta": 1,
+  "mantra_1": "Agniṃ īḷe purohitaṃ...",
+  "devotional_intent": "For family Shanti and recovery from past errors."
+}
+EOF
+
+# Link it in your Python logic
+# (Add this to anamika_service.py)
+@app.route('/veda/mandala1')
+def get_mandala1():
+    with open('app/Mandala_1.json', 'r') as f:
+        return jsonify(json.load(f))
