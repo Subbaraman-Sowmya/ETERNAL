@@ -37,3 +37,14 @@ def get_rituals():
 if __name__ == '__main__':
     # Listen on all interfaces for Docker
     app.run(host='0.0.0.0', port=8000)
+
+@app.route('/veda/mandala1')
+def get_mandala1():
+    import json
+    import os
+    file_path = os.path.join(os.path.dirname(__file__), 'Mandala_1.json')
+    try:
+        with open(file_path, 'r') as f:
+            return jsonify(json.load(f))
+    except FileNotFoundError:
+        return jsonify({"error": "Mandala_1.json not found in app folder"}), 404
