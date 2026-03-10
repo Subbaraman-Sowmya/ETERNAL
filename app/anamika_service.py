@@ -48,3 +48,21 @@ def get_mandala1():
             return jsonify(json.load(f))
     except FileNotFoundError:
         return jsonify({"error": "Mandala_1.json not found in app folder"}), 404
+
+@app.route('/veda/mandala4')
+def get_mandala4():
+    import json
+    try:
+        with open('/root/app/Mandala_4.json', 'r') as f:
+            return jsonify(json.load(f))
+    except FileNotFoundError:
+        return jsonify({"error": "Mandala_4.json not found"}), 404
+
+@app.route('/veda/mandala5')
+def get_mandala5():
+    import json
+    try:
+        with open('/root/app/Mandala_5.json', 'r') as f:
+            return jsonify(json.load(f))
+    except FileNotFoundError:
+        return jsonify({"error": "Mandala_5.json not found"}), 404
