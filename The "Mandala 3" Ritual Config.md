@@ -1,0 +1,11 @@
+cat <<EOF > /root/app/Mandala_3.json
+{
+  "project": "ETERNAL",
+  "mandala": 3,
+  "rishi": "Vishvamitra",
+  "key_hymn": "Gayatri Mantra",
+  "ritual_framework": "Ashvalayana Shrauta Sutra",
+  "instruction": "Modernize the invocation logic for digital retrieval.",
+  "status": "In-Progress"
+}
+EOF
